@@ -1,0 +1,26 @@
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  
+  let soma = 0;
+  let n;
+  
+  function somaDiviPor3ou5(n) {
+      
+      for(i = 0; i <= n; i++) {
+          if(i % 3 === 0 || i % 5 === 0) {
+            
+              soma += i;
+          }
+      }
+      return soma;
+  }
+  
+  readline.question('Por favor, insira um número:', n => {
+    console.log(`seu numero é ${n}!` );
+    console.log(`A soma dos numeros divisiveis por 3 e 5 é:`+ somaDiviPor3ou5(n),);
+
+    readline.close();
+  });
+  
